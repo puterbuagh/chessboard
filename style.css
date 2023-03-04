@@ -10,16 +10,10 @@
   height: 50px;
 }
 
-.light {
+.light:nth-child(2n), .dark:nth-child(2n+1) {
   background-color: #f0d9b5;
 }
 
-.dark {
-  background-color: #b58863;
-}
-
-/* alternating light/dark squares for each row */
-.board:nth-child(even) .square:nth-child(odd),
-.board:nth-child(odd) .square:nth-child(even) {
+.dark:nth-child(2n), .light:nth-child(2n+1) {
   background-color: #b58863;
 }
