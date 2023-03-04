@@ -10,10 +10,10 @@
   height: 50px;
 }
 
-.light:nth-child(2n), .dark:nth-child(2n+1) {
+.light {
   background-color: #f0d9b5;
 }
 
-.dark:nth-child(2n), .light:nth-child(2n+1) {
+.dark {
   background-color: #b58863;
 }
