@@ -10,27 +10,18 @@
   height: 50px;
 }
 
-.light {
+.light:nth-child(odd) {
   background-color: #f0d9b5;
 }
 
-.dark {
+.light:nth-child(even) {
   background-color: #b58863;
 }
 
-/* alternating light/dark squares for each row */
-.board:nth-child(odd) .square:nth-child(odd) {
+.dark:nth-child(odd) {
   background-color: #b58863;
 }
 
-.board:nth-child(odd) .square:nth-child(even) {
+.dark:nth-child(even) {
   background-color: #f0d9b5;
-}
-
-.board:nth-child(even) .square:nth-child(odd) {
-  background-color: #f0d9b5;
-}
-
-.board:nth-child(even) .square:nth-child(even) {
-  background-color: #b58863;
 }
