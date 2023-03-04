@@ -24,7 +24,7 @@
   background-color: #b58863;
 }
 
-.board:nth-child(odd) .square:nth-child(2n),
-.board:nth-child(even) .square:nth-child(2n+1) {
+.board:nth-child(even) .square:nth-child(2n),
+.board:nth-child(odd) .square:nth-child(2n+1) {
   background-color: #f0d9b5;
 }
