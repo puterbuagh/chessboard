@@ -1,121 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Times New Roman'; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 144.0px; text-indent: -144.0px; font: 12.0px 'Times New Roman'; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 0.0px 144.0px; text-indent: 48.0px; font: 12.0px 'Times New Roman'; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+            <title>Chess Board</title>
+<style>
+                        .chess-piece {
+                                    font-size: 60px;
+                                    text-align: center;
+                                    line-height: 1;
+                        }
+                        .white {
+                                    color: white;
+                        }
+                        .black {
+                                    color: black;
+                        }
+            </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;title&gt;Chess Board&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1">                        .chess-piece {</span></p>
-<p class="p1"><span class="s1">                                    font-size: 60px;</span></p>
-<p class="p1"><span class="s1">                                    text-align: center;</span></p>
-<p class="p1"><span class="s1">                                    line-height: 1;</span></p>
-<p class="p1"><span class="s1">                        }</span></p>
-<p class="p1"><span class="s1">                        .white {</span></p>
-<p class="p1"><span class="s1">                                    color: white;</span></p>
-<p class="p1"><span class="s1">                        }</span></p>
-<p class="p1"><span class="s1">                        .black {</span></p>
-<p class="p1"><span class="s1">                                    color: black;</span></p>
-<p class="p1"><span class="s1">                        }</span></p>
-<p class="p1"><span class="s1">            &lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;table&gt;</span></p>
-<p class="p1"><span class="s1">                        &lt;tbody&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a8" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9820;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b8" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9822;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c8" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9821;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d8" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9819;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e8" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9818;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f8" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9821;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g8" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9822;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h8" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9820;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                                        &lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a7" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b7" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c7" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d7" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e7" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f7" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g7" style="background-color: white"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h7" style="background-color: black"&gt;&lt;span class="chess-piece black"&gt;&amp;#9823;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a6" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b6" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c6" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d6" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e6" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f6" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g6" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h6" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a5" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b5" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c5" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d5" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e5" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f5" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g5" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h5" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a4" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b4" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c4" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d4" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e4" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f4" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g4" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h4" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;tr&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="a3" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="b3" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="c3" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="d3" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="e3" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="f3" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="g3" style="background-color: white"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                                &lt;td id="h3" style="background-color: black"&gt;&lt;/td&gt;</span></p>
-<p class="p1"><span class="s1">                                    &lt;/tr&gt;</span></p>
-<p class="p2"><span class="s1">&lt;tr&gt;</span></p>
-<p class="p3"><span class="s1">&lt;td id="a1" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9814;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="b1" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9816;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="c1" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9815;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="d1" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9813;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="e1" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9812;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="f1" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9815;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="g1" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9816;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="h1" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9814;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/tr&gt;</span></p>
-<p class="p2"><span class="s1">&lt;tr&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="a2" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="b2" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="c2" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="d2" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="e2" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="f2" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="g2" style="background-color: black"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">            &lt;td id="h2" style="background-color: white"&gt;&lt;span class="chess-piece white"&gt;&amp;#9817;&lt;/span&gt;&lt;/td&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/tr&gt;</span></p>
-<p class="p1"><span class="s1">            &lt;/tbody&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/table&gt;</span></p>
-</body>
-</html>
+            <table>
+                        <tbody>
+                                    <tr>
+                                                <td id="a8" style="background-color: black"><span class="chess-piece black">&#9820;</span></td>
+                                                <td id="b8" style="background-color: white"><span class="chess-piece black">&#9822;</span></td>
+                                                <td id="c8" style="background-color: black"><span class="chess-piece black">&#9821;</span></td>
+                                                <td id="d8" style="background-color: white"><span class="chess-piece black">&#9819;</span></td>
+                                                <td id="e8" style="background-color: black"><span class="chess-piece black">&#9818;</span></td>
+                                                <td id="f8" style="background-color: white"><span class="chess-piece black">&#9821;</span></td>
+                                                <td id="g8" style="background-color: black"><span class="chess-piece black">&#9822;</span></td>
+                                                <td id="h8" style="background-color: white"><span class="chess-piece black">&#9820;</span></td>
+                                                                        </tr>
+                                    <tr>
+                                                <td id="a7" style="background-color: white"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="b7" style="background-color: black"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="c7" style="background-color: white"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="d7" style="background-color: black"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="e7" style="background-color: white"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="f7" style="background-color: black"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="g7" style="background-color: white"><span class="chess-piece black">&#9823;</span></td>
+                                                <td id="h7" style="background-color: black"><span class="chess-piece black">&#9823;</span></td>
+                                    </tr>
+                                    <tr>
+                                                <td id="a6" style="background-color: black"></td>
+                                                <td id="b6" style="background-color: white"></td>
+                                                <td id="c6" style="background-color: black"></td>
+                                                <td id="d6" style="background-color: white"></td>
+                                                <td id="e6" style="background-color: black"></td>
+                                                <td id="f6" style="background-color: white"></td>
+                                                <td id="g6" style="background-color: black"></td>
+                                                <td id="h6" style="background-color: white"></td>
+                                    </tr>
+                                    <tr>
+                                                <td id="a5" style="background-color: white"></td>
+                                                <td id="b5" style="background-color: black"></td>
+                                                <td id="c5" style="background-color: white"></td>
+                                                <td id="d5" style="background-color: black"></td>
+                                                <td id="e5" style="background-color: white"></td>
+                                                <td id="f5" style="background-color: black"></td>
+                                                <td id="g5" style="background-color: white"></td>
+                                                <td id="h5" style="background-color: black"></td>
+                                    </tr>
+<tr>
+                                                <td id="a4" style="background-color: black"></td>
+                                                <td id="b4" style="background-color: white"></td>
+                                                <td id="c4" style="background-color: black"></td>
+                                                <td id="d4" style="background-color: white"></td>
+                                                <td id="e4" style="background-color: black"></td>
+                                                <td id="f4" style="background-color: white"></td>
+                                                <td id="g4" style="background-color: black"></td>
+                                                <td id="h4" style="background-color: white"></td>
+                                    </tr>
+                                    <tr>
+                                                <td id="a3" style="background-color: white"></td>
+                                                <td id="b3" style="background-color: black"></td>
+                                                <td id="c3" style="background-color: white"></td>
+                                                <td id="d3" style="background-color: black"></td>
+                                                <td id="e3" style="background-color: white"></td>
+                                                <td id="f3" style="background-color: black"></td>
+                                                <td id="g3" style="background-color: white"></td>
+                                                <td id="h3" style="background-color: black"></td>
+                                    </tr>
+                                    <tr>
+                                                <td id="a2" style="background-color: black"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="b2" style="background-color: white"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="c2" style="background-color: black"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="d2" style="background-color: white"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="e2" style="background-color: black"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="f2" style="background-color: white"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="g2" style="background-color: black"><span class="chess-piece white">&#9817;</span></td>
+                                                <td id="h2" style="background-color: white"><span class="chess-piece white">&#9817;</span></td>
+                                    </tr>
+                                    <tr>
+                                                <td id="a1" style="background-color: white"><span class="chess-piece white">&#9814;</span></td>
+                                                <td id="b1" style="background-color: black"><span class="chess-piece white">&#9816;</span></td>
+                                                <td id="c1" style="background-color: white"><span class="chess-piece white">&#9815;</span></td>
+                                                <td id="d1" style="background-color: black"><span class="chess-piece white">&#9813;</span></td>
+                                                <td id="e1" style="background-color: white"><span class="chess-piece white">&#9812;</span></td>
+                                                <td id="f1" style="background-color: black"><span class="chess-piece white">&#9815;</span></td>
+                                                <td id="g1" style="background-color: white"><span class="chess-piece white">&#9816;</span></td>
+                                                <td id="h1" style="background-color: black"><span class="chess-piece white">&#9814;</span></td>
+                                    </tr>
+              </tbody>
+</table>
