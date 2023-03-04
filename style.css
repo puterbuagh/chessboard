@@ -10,12 +10,21 @@
   height: 50px;
 }
 
-.light:nth-child(odd) .square:nth-child(even),
-.light:nth-child(even) .square:nth-child(odd) {
+.light {
   background-color: #f0d9b5;
 }
 
-.light:nth-child(odd) .square:nth-child(odd),
-.light:nth-child(even) .square:nth-child(even) {
+.dark {
   background-color: #b58863;
+}
+
+/* alternating light/dark squares for each row */
+.board:nth-child(odd) .square:nth-child(2n+1),
+.board:nth-child(even) .square:nth-child(2n) {
+  background-color: #b58863;
+}
+
+.board:nth-child(odd) .square:nth-child(2n),
+.board:nth-child(even) .square:nth-child(2n+1) {
+  background-color: #f0d9b5;
 }
