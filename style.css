@@ -17,3 +17,26 @@
 .dark {
   background-color: #b58863;
 }
+
+/* apply styles based on row and column */
+.square.row-0.col-0,
+.square.row-1.col-1,
+.square.row-2.col-0,
+.square.row-3.col-1,
+.square.row-4.col-0,
+.square.row-5.col-1,
+.square.row-6.col-0,
+.square.row-7.col-1 {
+  background-color: #b58863;
+}
+
+.square.row-0.col-1,
+.square.row-1.col-0,
+.square.row-2.col-1,
+.square.row-3.col-0,
+.square.row-4.col-1,
+.square.row-5.col-0,
+.square.row-6.col-1,
+.square.row-7.col-0 {
+  background-color: #f0d9b5;
+}
