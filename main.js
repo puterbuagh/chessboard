@@ -16,8 +16,9 @@ for (let i = 0; i < 8; i++) {
     }
 
 square.addEventListener('click', function() {
-  highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)');
+  highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)', canvas);
 });
+
 
     board.appendChild(square);
   }
@@ -37,8 +38,9 @@ const ctx = canvas.getContext('2d');
 for (const piece in pieces) {
   const img = new Image();
   img.src = pieces[piece];
-  img.onload = function() {
-    const position = piecePositions[piece];
-    ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-  }
+ img.onload = function() {
+  const position = piecePositions[piece];
+  ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+}
+
 }
