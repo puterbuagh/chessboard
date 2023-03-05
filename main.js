@@ -18,3 +18,7 @@ for (let i = 0; i < 8; i++) {
 }
 
 document.body.appendChild(board);
+
+const canvas = document.getElementById('chessboard');
+const ctx = canvas.getContext('2d');
+
