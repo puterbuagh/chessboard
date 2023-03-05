@@ -33,3 +33,9 @@ export const piecePositions = {
   bP: {x: pieceWidth * 5, y: pieceHeight},
 };
 
+export function highlightSquare(row, col) {
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
+  ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+}
+
