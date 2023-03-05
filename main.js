@@ -21,7 +21,6 @@ for (let i = 0; i < 8; i++) {
 
 document.body.appendChild(board);
 
-const canvas = document.createElement('canvas');
 canvas.id = 'chessboard';
 canvas.width = 400;
 canvas.height = 400;
