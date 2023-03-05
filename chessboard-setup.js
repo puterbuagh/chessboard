@@ -1,3 +1,5 @@
+const squareSize = 50;
+
 const pieces = {
   wK: "/img/pieces/wK.png",
   wQ: "/img/pieces/wQ.png",
@@ -40,6 +42,8 @@ for (const piece in pieces) {
   }
 
 }
+
+
 
 const canvas = document.getElementById('chessboard');
 canvas.addEventListener('click', handleClick);
