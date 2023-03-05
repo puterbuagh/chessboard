@@ -9,21 +9,19 @@ for (let i = 0; i < 8; i++) {
     square.className = `square row-${i} col-${j}`;
 
     // apply color based on row and column index
-    if ((i + j) % 2 === 0) {
+    if (((i % 2 === 0) && (j % 2 === 0)) || ((i % 2 === 1) && (j % 2 === 1))) {
       square.classList.add('light');
     } else {
       square.classList.add('dark');
     }
 
-square.addEventListener('click', function() {
-  highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)', canvas);
-});
-
+    square.addEventListener('click', function() {
+      highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)', canvas);
+    });
 
     board.appendChild(square);
   }
 }
-
 
 document.body.appendChild(board);
 
@@ -38,9 +36,8 @@ const ctx = canvas.getContext('2d');
 for (const piece in pieces) {
   const img = new Image();
   img.src = pieces[piece];
- img.onload = function() {
-  const position = piecePositions[piece];
-  ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-}
-
+  img.onload = function() {
+    const position = piecePositions[piece];
+    ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+  }
 }
