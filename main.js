@@ -15,9 +15,9 @@ for (let i = 0; i < 8; i++) {
       square.classList.add('dark');
     }
 
-    square.addEventListener('click', function() {
-      highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)');
-    });
+square.addEventListener('click', function() {
+  highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)');
+});
 
     board.appendChild(square);
   }
