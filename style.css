@@ -18,16 +18,15 @@
   background-color: #b58863;
 }
 
-.square.col-2 {
+/* apply styles based on row and column */
+.square:nth-child(2n) {
   background-color: #b58863;
 }
 
-.square.col-2:nth-child(2n) {
+.square:nth-child(2n+1) {
   background-color: #f0d9b5;
 }
 
-
-/* apply styles based on row and column */
 .square.row-0.col-0,
 .square.row-1.col-1,
 .square.row-2.col-0,
