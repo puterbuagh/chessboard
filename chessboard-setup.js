@@ -1,6 +1,3 @@
-const canvas = document.getElementById('chessboard');
-const ctx = canvas.getContext('2d');
-
 const pieces = {
   wK: "/img/pieces/wK.png",
   wQ: "/img/pieces/wQ.png",
@@ -41,7 +38,10 @@ for (const piece in pieces) {
     const position = piecePositions[piece];
     ctx.drawImage(img, position.x, position.y, pieceWidth, pieceHeight);
   }
-  const canvas = document.getElementById('chessboard');
+
+}
+
+const canvas = document.getElementById('chessboard');
 canvas.addEventListener('click', handleClick);
 
 function handleClick(event) {
@@ -52,11 +52,9 @@ function handleClick(event) {
 
   // do something with the row and column
 }
-  function highlightSquare(row, col) {
+
+function highlightSquare(row, col) {
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
   ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
-}
-
-
 }
