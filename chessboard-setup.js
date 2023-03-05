@@ -1,3 +1,5 @@
+const squareSize = 50;
+
 const pieces = {
   wK: "/img/pieces/wK.png",
   wQ: "/img/pieces/wQ.png",
