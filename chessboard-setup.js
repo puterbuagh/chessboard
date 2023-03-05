@@ -1,5 +1,3 @@
-const squareSize = 50;
-
 const pieces = {
   wK: "/img/pieces/wK.png",
   wQ: "/img/pieces/wQ.png",
@@ -17,6 +15,7 @@ const pieces = {
 
 const pieceWidth = 50;
 const pieceHeight = 50;
+const squareSize = 50;
 
 const piecePositions = {
   wK: {x: 0, y: 0},
@@ -33,32 +32,5 @@ const piecePositions = {
   bP: {x: pieceWidth * 5, y: pieceHeight},
 };
 
-for (const piece in pieces) {
-  const img = new Image();
-  img.src = pieces[piece];
-  img.onload = function() {
-    const position = piecePositions[piece];
-    ctx.drawImage(img, position.x, position.y, pieceWidth, pieceHeight);
-  }
-
-}
-
-
-
-const canvas = document.getElementById('chessboard');
-canvas.addEventListener('click', handleClick);
-
-function handleClick(event) {
-  const x = event.offsetX;
-  const y = event.offsetY;
-  const row = Math.floor(y / squareSize);
-  const col = Math.floor(x / squareSize);
-
-  // do something with the row and column
-}
-
-function highlightSquare(row, col) {
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
-  ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
-}
+// export the necessary variables
+export {squareSize, pieces, piecePositions};
