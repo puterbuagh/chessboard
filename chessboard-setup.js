@@ -1,6 +1,6 @@
-const squareSize = 50;
+export const squareSize = 50;
 
-const pieces = {
+export const pieces = {
   wK: "/img/pieces/wK.png",
   wQ: "/img/pieces/wQ.png",
   wR: "/img/pieces/wR.png",
@@ -15,11 +15,10 @@ const pieces = {
   bP: "/img/pieces/bP.png",
 };
 
-const pieceWidth = 50;
-const pieceHeight = 50;
-const squareSize = 50;
+export const pieceWidth = 50;
+export const pieceHeight = 50;
 
-const piecePositions = {
+export const piecePositions = {
   wK: {x: 0, y: 0},
   wQ: {x: pieceWidth, y: 0},
   wR: {x: pieceWidth * 2, y: 0},
@@ -34,5 +33,3 @@ const piecePositions = {
   bP: {x: pieceWidth * 5, y: pieceHeight},
 };
 
-// export the necessary variables
-export {squareSize, pieces, piecePositions};
