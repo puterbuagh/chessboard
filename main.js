@@ -1,5 +1,4 @@
-import {squareSize, pieceWidth, pieceHeight, piecePositions} from './chessboard-setup.js';
-import {pieces} from './chessboard-setup.js';
+import { squareSize, pieces, piecePositions } from './chessboard-setup.js';
 
 const board = document.createElement('div');
 board.className = 'board';
@@ -33,10 +32,10 @@ const ctx = canvas.getContext('2d');
 for (const piece in pieces) {
   const img = new Image();
   img.src = pieces[piece];
-  img.onload = function() {
+  img.onload = function () {
     const position = piecePositions[piece];
-    ctx.drawImage(img, position.x, position.y, pieceWidth, pieceHeight);
-  }
+    ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+  };
 }
 
 canvas.addEventListener('click', handleClick);
@@ -50,4 +49,7 @@ function handleClick(event) {
   // do something with the row and column
 }
 
-function highlightSquare(row, col
+function highlightSquare(row, col) {
+  ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
+  ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+}
