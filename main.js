@@ -1,4 +1,4 @@
-import { squareSize, pieces, piecePositions } from './chessboard-setup.js';
+import {squareSize, pieces, piecePositions, highlightSquare} from './chessboard-setup.js';
 
 const board = document.createElement('div');
 board.className = 'board';
@@ -14,6 +14,10 @@ for (let i = 0; i < 8; i++) {
     } else {
       square.classList.add('dark');
     }
+
+    square.addEventListener('click', function() {
+      highlightSquare(i, j);
+    });
 
     board.appendChild(square);
   }
@@ -32,24 +36,8 @@ const ctx = canvas.getContext('2d');
 for (const piece in pieces) {
   const img = new Image();
   img.src = pieces[piece];
-  img.onload = function () {
+  img.onload = function() {
     const position = piecePositions[piece];
     ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-  };
-}
-
-canvas.addEventListener('click', handleClick);
-
-function handleClick(event) {
-  const x = event.offsetX;
-  const y = event.offsetY;
-  const row = Math.floor(y / squareSize);
-  const col = Math.floor(x / squareSize);
-
-  // do something with the row and column
-}
-
-function highlightSquare(row, col) {
-  ctx.fillStyle = 'rgba(255, 255, 0, 0.5)';
-  ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+  }
 }
