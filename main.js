@@ -1,3 +1,5 @@
+import {squareSize, pieces, piecePositions} from './chessboard-setup.js';
+
 const board = document.createElement('div');
 board.className = 'board';
 
@@ -19,6 +21,16 @@ for (let i = 0; i < 8; i++) {
 
 document.body.appendChild(board);
 
-const canvas = document.getElementById('chessboard');
+const canvas = document.createElement('canvas');
+canvas.id = 'chessboard';
+canvas.width = 400;
+canvas.height = 400;
+document.body.appendChild(canvas);
+
 const ctx = canvas.getContext('2d');
 
+for (const piece in pieces) {
+  const img = new Image();
+  img.src = pieces[piece];
+  img.onload = function() {
+    const position = piece
