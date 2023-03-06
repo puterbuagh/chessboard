@@ -11,22 +11,20 @@
 }
 
 .square.light {
-  background-color: #b58863;
+  background-color: #f0d9b5;
 }
 
 .square.dark {
-  background-color: #f0d9b5;
-}
-
-
-
-/* apply styles based on row and column */
-.square:nth-child(2n) {
   background-color: #b58863;
 }
 
-.square:nth-child(2n+1) {
+/* apply styles based on row and column */
+.square:nth-child(2n) {
   background-color: #f0d9b5;
+}
+
+.square:nth-child(2n+1) {
+  background-color: #b58863;
 }
 
 .square.row-0:nth-child(odd),
@@ -37,7 +35,7 @@
 .square.row-5:nth-child(even),
 .square.row-6:nth-child(odd),
 .square.row-7:nth-child(even) {
-  background-color: #b58863;
+  background-color: #f0d9b5;
 }
 
 .square.row-0:nth-child(even),
@@ -48,5 +46,5 @@
 .square.row-5:nth-child(odd),
 .square.row-6:nth-child(even),
 .square.row-7:nth-child(odd) {
-  background-color: #f0d9b5;
+  background-color: #b58863;
 }
