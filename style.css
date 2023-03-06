@@ -10,13 +10,14 @@
   height: 50px;
 }
 
-.light {
+.square.light {
   background-color: #b58863;
 }
 
-.dark {
+.square.dark {
   background-color: #f0d9b5;
 }
+
 
 
 /* apply styles based on row and column */
