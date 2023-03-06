@@ -1,5 +1,3 @@
-import {squareSize, pieces, piecePositions, highlightSquare} from './chessboard-setup.js';
-
 const board = document.createElement('div');
 board.className = 'board';
 
