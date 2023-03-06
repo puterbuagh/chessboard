@@ -11,12 +11,13 @@
 }
 
 .light {
-  background-color: #f0d9b5;
+  background-color: #b58863;
 }
 
 .dark {
-  background-color: #b58863;
+  background-color: #f0d9b5;
 }
+
 
 /* apply styles based on row and column */
 .square:nth-child(2n) {
