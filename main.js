@@ -16,7 +16,7 @@ for (let i = 0; i < 8; i++) {
     }
 
     square.addEventListener('click', function() {
-      highlightSquare(i, j, square.classList.contains('light') ? 'rgba(240, 217, 181, 0.5)' : 'rgba(181, 136, 99, 0.5)', canvas);
+      handleUserClick(i, j);
     });
 
     board.appendChild(square);
@@ -33,23 +33,28 @@ document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
 
-for (const piece in pieces) {
-  const img = new Image();
-  img.src = pieces[piece];
-  img.onload = function() {
-    const position = piecePositions[piece];
-    ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+function initializeChessPieces() {
+  for (const piece in piecePositions) {
+    const img = new Image();
+    img.src = pieces[piece];
+    img.onload = function() {
+      const position = piecePositions[piece];
+      ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+    }
   }
 }
 
-const boardState = [
-  ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'],
-  ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
-  ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'],
-  ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR']
-];
+function redrawBoard(canvas) {
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (const piece in piecePositions) {
+    const img = new Image();
+    img.src = pieces[piece];
+    img.onload = function () {
+      const position = piecePositions[piece];
+      ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+    };
+  }
+}
 
+initializeChessPieces();
