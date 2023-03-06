@@ -58,3 +58,38 @@ function redrawBoard(canvas) {
 }
 
 initializeChessPieces();
+// Add event listener to the canvas element
+canvas.addEventListener('click', handleUserClick);
+
+// Define variables for tracking selected piece
+let selectedPiece = null;
+let selectedRow = null;
+let selectedCol = null;
+
+function handleUserClick(event) {
+  const row = Math.floor(event.offsetY / squareSize);
+  const col = Math.floor(event.offsetX / squareSize);
+  const clickedPiece = getPieceAtPosition(row, col);
+  if (selectedPiece === null) {
+    if (clickedPiece) {
+      selectedPiece = clickedPiece;
+      selectedRow = row;
+      selectedCol = col;
+      highlightSquare(row, col, 'rgba(240, 217, 181, 0.5)', canvas);
+    }
+  } else {
+    const isValidMove = checkIfValidMove(selectedPiece, selectedRow, selectedCol, row, col);
+    if (isValidMove) {
+      piecePositions[selectedPiece] = { x: col * squareSize, y: row * squareSize };
+      redrawBoard(canvas);
+    }
+    selectedPiece = null;
+    selectedRow = null;
+    selectedCol = null;
+  }
+}
+
+function checkIfValidMove(piece, fromRow, fromCol, toRow, toCol) {
+  // Add your logic to check if the move is valid
+  return true;
+}
