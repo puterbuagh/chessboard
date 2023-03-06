@@ -5,9 +5,59 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <!-- chessboard markup here -->
+    <div class="board"></div>
     <canvas id="chessboard"></canvas>
     <script src="chessboard-setup.js" type="module"></script>
     <script type="module" src="main.js"></script>
+    <script>
+      // Add event listener to the canvas element
+      canvas.addEventListener('click', handleUserClick);
+      
+      // Define variables for tracking selected piece
+      let selectedPiece = null;
+      let selectedRow = null;
+      let selectedCol = null;
+
+      function handleUserClick(event) {
+        const row = Math.floor(event.offsetY / squareSize);
+        const col = Math.floor(event.offsetX / squareSize);
+        const clickedPiece = getPieceAtPosition(row, col);
+        if (selectedPiece === null) {
+          if (clickedPiece) {
+            selectedPiece = clickedPiece;
+            selectedRow = row;
+            selectedCol = col;
+            highlightSquare(row, col, 'rgba(240, 217, 181, 0.5)', canvas);
+          }
+        } else {
+          const isValidMove = checkIfValidMove(selectedPiece, selectedRow, selectedCol, row, col);
+          if (isValidMove) {
+            piecePositions[selectedPiece] = { x: col * squareSize, y: row * squareSize };
+            redrawBoard(canvas);
+          }
+          selectedPiece = null;
+          selectedRow = null;
+          selectedCol = null;
+        }
+      }
+
+      function checkIfValidMove(piece, fromRow, fromCol, toRow, toCol) {
+        // Add your logic to check if the move is valid
+        return true;
+      }
+
+      function redrawBoard(canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const piece in piecePositions) {
+          const img = new Image();
+          img.src = pieces[piece];
+          img.onload = function () {
+            const position = piecePositions[piece];
+            ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+          };
+        }
+      }
+    </script>
   </body>
 </html>
