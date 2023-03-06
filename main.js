@@ -93,3 +93,14 @@ function checkIfValidMove(piece, fromRow, fromCol, toRow, toCol) {
   // Add your logic to check if the move is valid
   return true;
 }
+
+function getPieceAtPosition(row, col) {
+  for (const piece in piecePositions) {
+    const position = piecePositions[piece];
+    if (position.x === col * squareSize && position.y === row * squareSize) {
+      return piece;
+    }
+  }
+  return null;
+}
+
