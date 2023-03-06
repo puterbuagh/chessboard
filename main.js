@@ -1,3 +1,5 @@
+import { pieces } from './chessboard-setup.js';
+
 import { piecePositions } from './chessboard-setup.js';
 
 const board = document.createElement('div');
