@@ -27,24 +27,24 @@
   background-color: #f0d9b5;
 }
 
-.square.row-0.col-0,
-.square.row-1.col-1,
-.square.row-2.col-0,
-.square.row-3.col-1,
-.square.row-4.col-0,
-.square.row-5.col-1,
-.square.row-6.col-0,
-.square.row-7.col-1 {
+.square.row-0:nth-child(odd),
+.square.row-1:nth-child(even),
+.square.row-2:nth-child(odd),
+.square.row-3:nth-child(even),
+.square.row-4:nth-child(odd),
+.square.row-5:nth-child(even),
+.square.row-6:nth-child(odd),
+.square.row-7:nth-child(even) {
   background-color: #b58863;
 }
 
-.square.row-0.col-1,
-.square.row-1.col-0,
-.square.row-2.col-1,
-.square.row-3.col-0,
-.square.row-4.col-1,
-.square.row-5.col-0,
-.square.row-6.col-1,
-.square.row-7.col-0 {
+.square.row-0:nth-child(even),
+.square.row-1:nth-child(odd),
+.square.row-2:nth-child(even),
+.square.row-3:nth-child(odd),
+.square.row-4:nth-child(even),
+.square.row-5:nth-child(odd),
+.square.row-6:nth-child(even),
+.square.row-7:nth-child(odd) {
   background-color: #f0d9b5;
 }
