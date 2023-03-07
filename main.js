@@ -34,17 +34,6 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 function initializeChessPieces() {
-  for (const piece in piecePositions) {
-    const img = new Image();
-    img.src = pieces[piece];
-    img.onload = function() {
-      const position = piecePositions[piece];
-      ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-    }
-  }
-}
-
-function initializeChessPieces() {
   console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
   console.log(piecePositions);
 
@@ -57,7 +46,6 @@ function initializeChessPieces() {
     }
   }
 }
-
 
 initializeChessPieces();
 // Add event listener to the canvas element
