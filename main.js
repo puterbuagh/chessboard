@@ -38,12 +38,13 @@ function initializeChessPieces() {
   console.log(piecePositions);
 
   for (const piece in piecePositions) {
+    const position = piecePositions[piece];
+    console.log(`Piece: ${piece}, x: ${position.x}, y: ${position.y}`);
     const img = new Image();
     img.src = pieces[piece];
     img.onload = function() {
-      const position = piecePositions[piece];
       ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-      drawPieces(ctx); // add this line
+      drawPieces(ctx);
     }
   }
 }
