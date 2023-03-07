@@ -41,4 +41,17 @@ export function highlightSquare(row, col, color, canvas) {
   ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
 }
 
+export function drawPieces(ctx) {
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+      const piece = getPieceAtPosition(row, col);
+      if (piece) {
+        const image = pieceImages[piece];
+        const x = col * squareSize;
+        const y = row * squareSize;
+        ctx.drawImage(image, x, y, squareSize, squareSize);
+      }
+    }
+  }
+}
 
