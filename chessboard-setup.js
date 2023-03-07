@@ -1,7 +1,7 @@
 export const squareSize = 50;
 
 export const pieces = {
-  wK: "img/pieces/wK.png",
+wK: "img/pieces/wK.png",
 wQ: "img/pieces/wQ.png",
 wR: "img/pieces/wR.png",
 wB: "img/pieces/wB.png",
