@@ -37,17 +37,69 @@ function initializeChessPieces() {
   console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
   console.log(piecePositions);
 
+  function getPieceImage(piece) {
+    switch (piece) {
+      case "wK":
+        return whiteKingImg;
+      case "wQ":
+        return whiteQueenImg;
+      case "wR1":
+      case "wR2":
+        return whiteRookImg;
+      case "wB1":
+      case "wB2":
+        return whiteBishopImg;
+      case "wN1":
+      case "wN2":
+        return whiteKnightImg;
+      case "wP1":
+      case "wP2":
+      case "wP3":
+      case "wP4":
+      case "wP5":
+      case "wP6":
+      case "wP7":
+      case "wP8":
+        return whitePawnImg;
+      case "bK":
+        return blackKingImg;
+      case "bQ":
+        return blackQueenImg;
+      case "bR1":
+      case "bR2":
+        return blackRookImg;
+      case "bB1":
+      case "bB2":
+        return blackBishopImg;
+      case "bN1":
+      case "bN2":
+        return blackKnightImg;
+      case "bP1":
+      case "bP2":
+      case "bP3":
+      case "bP4":
+      case "bP5":
+      case "bP6":
+      case "bP7":
+      case "bP8":
+        return blackPawnImg;
+      default:
+        throw new Error(`Invalid piece name: ${piece}`);
+    }
+  }
+
   for (const piece in piecePositions) {
     const position = piecePositions[piece];
     console.log(`Piece: ${piece}, x: ${position.x}, y: ${position.y}`);
     const img = new Image();
-    img.src = pieces[piece];
+    img.src = getPieceImage(piece);
     img.onload = function() {
       ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
       drawPieces(ctx);
     }
   }
 }
+
 
 initializeChessPieces();
 // Add event listener to the canvas element
