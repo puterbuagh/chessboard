@@ -1,4 +1,4 @@
-import { squareSize, pieces, piecePositions, highlightSquare } from './chessboard-setup.js';
+import { squareSize, pieces, piecePositions, highlightSquare, drawPieces } from './chessboard-setup.js';
 
 const board = document.createElement('div');
 board.className = 'board';
@@ -43,6 +43,7 @@ function initializeChessPieces() {
     img.onload = function() {
       const position = piecePositions[piece];
       ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
+      drawPieces(ctx); // add this line
     }
   }
 }
