@@ -33,6 +33,19 @@ document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
 
+const whiteKingImg = 'img/pieces/wK.png';
+const whiteQueenImg = 'img/pieces/wQ.png';
+const whiteRookImg = 'img/pieces/wR.png';
+const whiteBishopImg = 'img/pieces/wB.png';
+const whiteKnightImg = 'img/pieces/wN.png';
+const whitePawnImg = 'img/pieces/wP.png';
+const blackKingImg = 'img/pieces/bK.png';
+const blackQueenImg = 'img/pieces/bQ.png';
+const blackRookImg = 'img/pieces/bR.png';
+const blackBishopImg = 'img/pieces/bB.png';
+const blackKnightImg = 'img/pieces/bN.png';
+const blackPawnImg = 'img/pieces/bP.png';
+
 function initializeChessPieces() {
   console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
   console.log(piecePositions);
