@@ -24,15 +24,15 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-export const WHITE = 'w';
-export const BLACK = 'b';
-export const PAWN = 'p';
-export const KNIGHT = 'n';
-export const BISHOP = 'b';
-export const ROOK = 'r';
-export const QUEEN = 'q';
-export const KING = 'k';
-export const DEFAULT_POSITION = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+const WHITE = 'w';
+const BLACK = 'b';
+const PAWN = 'p';
+const KNIGHT = 'n';
+const BISHOP = 'b';
+const ROOK = 'r';
+const QUEEN = 'q';
+const KING = 'k';
+const DEFAULT_POSITION = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 const EMPTY = -1;
 const FLAGS = {
     NORMAL: 'n',
@@ -44,7 +44,7 @@ const FLAGS = {
     QSIDE_CASTLE: 'q',
 };
 // prettier-ignore
-export const SQUARES = [
+const SQUARES = [
     'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8',
     'a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7',
     'a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6',
