@@ -44,18 +44,20 @@ function initializeChessPieces() {
   }
 }
 
-function redrawBoard(canvas) {
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+function initializeChessPieces() {
+  console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
+  console.log(piecePositions);
+
   for (const piece in piecePositions) {
     const img = new Image();
     img.src = pieces[piece];
-    img.onload = function () {
+    img.onload = function() {
       const position = piecePositions[piece];
       ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
-    };
+    }
   }
 }
+
 
 initializeChessPieces();
 // Add event listener to the canvas element
