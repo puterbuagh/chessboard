@@ -1,7 +1,5 @@
 import { squareSize } from './chessboard-setup.js';
-import { pieces } from './chessboard-setup.js';
-import { piecePositions } from './chessboard-setup.js';
-import { squareSize, highlightSquare } from './chessboard-setup.js';
+import { pieces, piecePositions, highlightSquare } from './chessboard-setup.js';
 
 const board = document.createElement('div');
 board.className = 'board';
