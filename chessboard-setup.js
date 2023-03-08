@@ -1,5 +1,18 @@
 export const squareSize = 50;
 
+const whiteKingImg = 'img/pieces/wK.png';
+const whiteQueenImg = 'img/pieces/wQ.png';
+const whiteRookImg = 'img/pieces/wR.png';
+const whiteBishopImg = 'img/pieces/wB.png';
+const whiteKnightImg = 'img/pieces/wN.png';
+const whitePawnImg = 'img/pieces/wP.png';
+const blackKingImg = 'img/pieces/bK.png';
+const blackQueenImg = 'img/pieces/bQ.png';
+const blackRookImg = 'img/pieces/bR.png';
+const blackBishopImg = 'img/pieces/bB.png';
+const blackKnightImg = 'img/pieces/bN.png';
+const blackPawnImg = 'img/pieces/bP.png';
+
 export const pieces = {
 wK: "img/pieces/wK.png",
 wQ: "img/pieces/wQ.png",
