@@ -53,6 +53,15 @@ export const piecePositions = {
   bP7: {x: pieceWidth * 6, y: pieceHeight * 1},  
   bP8: {x: pieceWidth * 7, y: pieceHeight * 1},
 };
+export function getPieceAtPosition(row, col) {
+  for (const piece in piecePositions) {
+    const position = piecePositions[piece];
+    if (position.x === col * pieceWidth && position.y === row * pieceHeight) {
+      return piece;
+    }
+  }
+  return null;
+}
 
 
 export function highlightSquare(row, col, color, canvas) {
