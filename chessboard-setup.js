@@ -88,10 +88,11 @@ export function drawPieces(ctx) {
     for (let col = 0; col < 8; col++) {
       const piece = getPieceAtPosition(row, col);
       if (piece) {
-        const image = pieceImages[piece];
-        const x = col * squareSize;
-        const y = row * squareSize;
-        ctx.drawImage(image, x, y, squareSize, squareSize);
+        const image = new Image();
+        image.src = pieces[piece];
+        const x = col * pieceWidth;
+        const y = row * pieceHeight;
+        ctx.drawImage(image, x, y, pieceWidth, pieceHeight);
       }
     }
   }
