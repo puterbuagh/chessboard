@@ -98,5 +98,3 @@ function checkIfValidMove(piece, fromRow, fromCol, toRow, toCol) {
   // Add your logic to check if the move is valid
   return true;
 }
-
-
