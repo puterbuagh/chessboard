@@ -1,5 +1,11 @@
 import { squareSize, pieces, piecePositions, highlightSquare, drawPieces, pieceWidth, pieceHeight, getPieceAtPosition, initializeChessPieces } from './chessboard-setup.js';
 
+const canvas = document.createElement('canvas');
+canvas.id = 'chessboard';
+canvas.width = 400;
+canvas.height = 400;
+document.body.appendChild(canvas);
+
 async function startGame() {
   const ctx = canvas.getContext('2d');
   const drawPieces = await initializeChessPieces();
@@ -29,12 +35,6 @@ for (let i = 0; i < 8; i++) {
 }
 
 document.body.appendChild(board);
-
-const canvas = document.createElement('canvas');
-canvas.id = 'chessboard';
-canvas.width = 400;
-canvas.height = 400;
-document.body.appendChild(canvas);
 
 const whiteKingImg = 'img/pieces/wK.png';
 const whiteQueenImg = 'img/pieces/wQ.png';
@@ -82,7 +82,9 @@ function handleUserClick(event) {
       selectedCol = col;
       highlightSquare(row, col, 'rgba(240, 217, 181, 0.5)', canvas);
     }
-  } else {
+  } 
+  
+  else {
     const isValidMove = checkIfValidMove(selectedPiece, selectedRow, selectedCol, row, col);
     if (isValidMove) {
       piecePositions[selectedPiece] = { x: col * squareSize, y: row * squareSize };
@@ -97,4 +99,4 @@ function handleUserClick(event) {
 function checkIfValidMove(piece, fromRow, fromCol, toRow, toCol) {
   // Add your logic to check if the move is valid
   return true;
-};
+};}
