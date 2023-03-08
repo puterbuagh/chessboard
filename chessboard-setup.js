@@ -1,5 +1,106 @@
 export const squareSize = 50;
 
+function getPieceImage(piece) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => {
+      resolve(image);
+    };
+    image.onerror = (error) => {
+      reject(error);
+    };
+    switch (piece) {
+      case "wK":
+        image.src = whiteKingImg;
+        break;
+      case "wQ":
+        image.src = whiteQueenImg;
+        break;
+      case "wR1":
+      case "wR2":
+        image.src = whiteRookImg;
+        break;
+      case "wB1":
+      case "wB2":
+        image.src = whiteBishopImg;
+        break;
+      case "wN1":
+      case "wN2":
+        image.src = whiteKnightImg;
+        break;
+      case "wP1":
+      case "wP2":
+      case "wP3":
+      case "wP4":
+      case "wP5":
+      case "wP6":
+      case "wP7":
+      case "wP8":
+        image.src = whitePawnImg;
+        break;
+      case "bK":
+        image.src = blackKingImg;
+        break;
+      case "bQ":
+        image.src = blackQueenImg;
+        break;
+      case "bR1":
+      case "bR2":
+        image.src = blackRookImg;
+        break;
+      case "bB1":
+      case "bB2":
+        image.src = blackBishopImg;
+        break;
+      case "bN1":
+      case "bN2":
+        image.src = blackKnightImg;
+        break;
+      case "bP1":
+      case "bP2":
+      case "bP3":
+      case "bP4":
+      case "bP5":
+      case "bP6":
+      case "bP7":
+      case "bP8":
+        image.src = blackPawnImg;
+        break;
+      default:
+        reject(new Error(`Invalid piece name: ${piece}`));
+    }
+  });
+}
+
+async function initializeChessPieces() {
+  console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
+  console.log(piecePositions);
+
+  const images = {};
+  const promises = Object.keys(piecePositions).map((piece) => {
+    return getPieceImage(piece).then((image) => {
+      images[piece] = image;
+    });
+  });
+  await Promise.all(promises);
+
+  function drawPieces(ctx) {
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const piece = getPieceAtPosition(row, col);
+        if (piece) {
+          const image = images[piece];
+          const x = col * pieceWidth;
+          const y = row * pieceHeight;
+          ctx.drawImage(image, x, y, pieceWidth, pieceHeight);
+        }
+      }
+    }
+  }
+
+  return drawPieces;
+}
+
 const whiteKingImg = 'img/pieces/wK.png';
 const whiteQueenImg = 'img/pieces/wQ.png';
 const whiteRookImg = 'img/pieces/wR.png';
