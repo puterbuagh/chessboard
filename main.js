@@ -59,9 +59,6 @@ for (const piece in piecePositions) {
   });
 }
 
-}
-
-
 initializeChessPieces();
 // Add event listener to the canvas element
 canvas.addEventListener('click', handleUserClick);
