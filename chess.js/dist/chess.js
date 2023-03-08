@@ -215,6 +215,7 @@ export function validateFen(fen) {
             error: 'Invalid FEN: must contain six space-delimited fields',
         };
     }
+}
     // 2nd criterion: move number field is a integer value > 0?
     const moveNumber = parseInt(tokens[5], 10);
     if (isNaN(moveNumber) || moveNumber <= 0) {
