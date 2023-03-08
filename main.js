@@ -46,16 +46,19 @@ const blackBishopImg = 'img/pieces/bB.png';
 const blackKnightImg = 'img/pieces/bN.png';
 const blackPawnImg = 'img/pieces/bP.png';
 
-  for (const piece in piecePositions) {
-    const position = piecePositions[piece];
-    console.log(`Piece: ${piece}, x: ${position.x}, y: ${position.y}`);
+for (const piece in piecePositions) {
+  const position = piecePositions[piece];
+  console.log(`Piece: ${piece}, x: ${position.x}, y: ${position.y}`);
+  getPieceImage(piece).then((image) => {
     const img = new Image();
-    img.src = getPieceImage(piece);
     img.onload = function() {
       ctx.drawImage(img, position.x, position.y, squareSize, squareSize);
       drawPieces(ctx);
     }
-  }
+    img.src = image.src;
+  });
+}
+
 }
 
 
