@@ -72,7 +72,7 @@ function getPieceImage(piece) {
   });
 }
 
-async function initializeChessPieces() {
+export async function initializeChessPieces() {
   console.log(`pieceWidth: ${pieceWidth}, pieceHeight: ${pieceHeight}`);
   console.log(piecePositions);
 
