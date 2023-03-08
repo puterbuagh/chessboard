@@ -1,6 +1,11 @@
 import { squareSize, pieces, piecePositions, highlightSquare, drawPieces, pieceWidth, pieceHeight, getPieceAtPosition, initializeChessPieces } from './chessboard-setup.js';
 
-const board = document.createElement('div');
+async function startGame() {
+  const ctx = canvas.getContext('2d');
+  const drawPieces = await initializeChessPieces();
+  drawPieces(ctx);
+
+  const board = document.createElement('div');
 board.className = 'board';
 
 for (let i = 0; i < 8; i++) {
