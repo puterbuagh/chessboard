@@ -1,6 +1,6 @@
 export const squareSize = 50;
 
-function getPieceImage(piece) {
+export function getPieceImage(piece) {
   return new Promise((resolve, reject) => {
     const image = new Image();
     image.onload = () => {
@@ -84,7 +84,7 @@ export async function initializeChessPieces() {
   });
   await Promise.all(promises);
 
-  function drawPieces(ctx) {
+  export function drawPieces(ctx) {
     for (let row = 0; row < 8; row++) {
       for (let col = 0; col < 8; col++) {
         const piece = getPieceAtPosition(row, col);
