@@ -1,4 +1,4 @@
-import { squareSize, pieces, piecePositions, highlightSquare, drawPieces, pieceWidth, pieceHeight, getPieceAtPosition, initializeChessPieces } from './chessboard-setup.js';
+import { squareSize, pieces, piecePositions, highlightSquare, drawPieces, pieceWidth, pieceHeight, getPieceAtPosition, initializeChessPieces, getPieceImage } from './chessboard-setup.js';
 
 const canvas = document.createElement('canvas');
 canvas.id = 'chessboard';
