@@ -84,7 +84,7 @@ export async function initializeChessPieces() {
   });
   await Promise.all(promises);
 
-  export function drawPieces(ctx) {
+  function drawPieces(ctx) {
     for (let row = 0; row < 8; row++) {
       for (let col = 0; col < 8; col++) {
         const piece = getPieceAtPosition(row, col);
