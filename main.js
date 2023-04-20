@@ -11,26 +11,19 @@ async function startGame() {
   const drawPieces = await initializeChessPieces();
   drawPieces(ctx);
 
-  const board = document.createElement('div');
-    board.className = 'board';
-
-for (let i = 0; i < 8; i++) {
-  for (let j = 0; j < 8; j++) {
-    const square = document.createElement('div');
-    square.className = `square row-${i} col-${j}`;
-
-    // apply color based on row and column index
-    if (((i % 2 === 0) && (j % 2 === 0)) || ((i % 2 === 1) && (j % 2 === 1))) {
-      square.classList.add('light');
-    } else {
-      square.classList.add('dark');
+ function drawBoard(ctx) {
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      if (((i % 2 === 0) && (j % 2 === 0)) || ((i % 2 === 1) && (j % 2 === 1))) {
+        ctx.fillStyle = '#f0d9b5';
+      } else {
+        ctx.fillStyle = '#b58863';
+      }
+      ctx.fillRect(j * squareSize, i * squareSize, squareSize, squareSize);
     }
+  }
+}
 
-    square.addEventListener('click', function() {
-      handleUserClick(i, j);
-    });
-
-    board.appendChild(square);
   }
 }
 
